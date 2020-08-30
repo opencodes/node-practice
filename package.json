@@ -1,24 +1,26 @@
 {
-  "name": "ph-microservice-starterkit",
+  "name": "ph-sample-svc",
   "version": "1.0.0",
   "description": "This README would normally document whatever steps are necessary to get your application up and running.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/opencodes/ph-microservice-starterkit.git"
+    "url": "git+ssh://git@bitbucket.org/opencodes/ph-sample-svc.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/opencodes/ph-microservice-starterkit#readme",
+  "homepage": "https://bitbucket.org/opencodes/ph-sample-svc#readme",
   "scripts": {
-    "start": "nodemon src/app.ts",
+    "start": "nodemon src/server.ts",
     "build": "tsc"
   },
   "dependencies": {
+    "@types/mongoose": "^5.7.36",
     "axios": "^0.19.2",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.7",
