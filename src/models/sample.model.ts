@@ -1,7 +1,7 @@
 import mongoose, {Schema} from 'mongoose';
 
-const SampleSchema: Schema = new Schema({
+const UserSchema: Schema = new Schema({
   title: {type: String, required: true},
 });
 
-export default mongoose.model('family', SampleSchema);
+export default mongoose.model('user', UserSchema);

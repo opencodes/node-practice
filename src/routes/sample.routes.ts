@@ -1,19 +1,19 @@
 module.exports = (app: any) => {
-  const sample = require('../controllers/sample.controller.ts');
+  const user = require('../controllers/sample.controller.ts');
 
   // Create a new Note
-  app.post('/sample', sample.create);
+  app.post('/user', user.create);
 
   // Retrieve all Notes
-  app.get('/sample', sample.findAll);
+  app.get('/user', user.findAll);
 
   // Retrieve a single Note with noteId
-  app.get('/sample/:sampleId', sample.findOne);
+  app.get('/user/:userId', user.findOne);
 
   // Retrieve a single Note with noteId
   // // Update a Note with noteId
-  app.put('/sample/:sampleId', sample.update);
+  app.put('/user/:userId', user.update);
 
   // // Delete a Note with noteId
-  app.delete('/sample/:sampleId', sample.delete);
+  app.delete('/user/:userId', user.delete);
 };

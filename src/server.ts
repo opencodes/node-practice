@@ -13,7 +13,6 @@ app.use(bodyParser.json());
 // Configuring the database
 const dbConfig = require('./datasources/db.datasource');
 const mongoose = require('mongoose');
-console.log(dbConfig);
 
 mongoose.Promise = global.Promise;
 
@@ -21,6 +20,7 @@ mongoose.Promise = global.Promise;
 mongoose
   .connect(dbConfig.url, {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
   .then(() => {
     console.log('Successfully connected to the database');
@@ -33,14 +33,13 @@ mongoose
 // define a simple route
 app.get('/', (req: any, res: any) => {
   res.json({
-    message:
-      'Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes.',
+    message: 'Welcome to the application.',
   });
 });
 
 require('./routes/sample.routes')(app);
 
 // listen for requests
-app.listen(5000, () => {
-  console.log('Server is listening on port 3000');
+app.listen(8000, () => {
+  console.log('Server is listening on port 8000');
 });
